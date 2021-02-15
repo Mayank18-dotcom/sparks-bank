@@ -1,0 +1,32 @@
+<body class="bg-gray-500" *ngIf="loader">
+    <h1 class="text-3xl leading-9 font-extrabold text-gray-900 pldr bg-gray-500">
+        <circle-progress *ngIf="loader" [animation]="true" [animationDuration]="10000"></circle-progress>
+    </h1>
+</body>
+
+<body class="bg-gray-500" *ngIf="!loader">
+    <br><br>
+    <div class="flex flex-wrap w-full mb-20 flex-col items-center text-center">
+        <h1 class="sm:text-3xl text-2xl font-medium title-font mb-2 text-gray-900">MANAGE TRANSACTIONS</h1>
+    </div>
+    
+    <table class="container px-5 py-24 mx-auto bg-blue-200 w-3/4 rounded">
+        <thead class="text-black">
+            <tr class="bg-teal-400 flex flex-col flex-no wrap sm:table-row rounded-l-lg sm:rounded-none mb-2 sm:mb-0">
+                <th class="p-5 text-left">Name</th>
+                <th class="p-5 text-left">Email</th>
+                <th class="p-5 text-left">Balance</th>
+                <th class="p-5 text-left">Send Money</th>
+            </tr>
+        </thead>
+        <tbody class="flex-1 sm:flex-none bg-blue-300">
+            <tr *ngFor="let user of users" class="flex flex-col flex-no wrap sm:table-row mb-10 sm:mb-0">
+                <td class="border-grey-light border hover:bg-blue-400 p-5">{{user.name}}</td>
+                <td class="border-grey-light border hover:bg-blue-400 p-5 truncate">{{user.email}}</td>
+                <td class="border-grey-light border hover:bg-blue-400 p-5">{{user.balance}}</td>
+                <td routerLink="/makepayment/{{user.name}}" class="border-grey-light border hover:bg-blue-400 p-5 text-white hover:text-red-600 hover:font-medium cursor-pointer">Send</td>
+            </tr>
+        </tbody>
+    </table>
+    <br><br>
+</body>

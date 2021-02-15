@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <title>SparksBank</title>
+</head>
+<body>
+    <!--header-->
+    <header class="text-gray-600 body-font bg-gray-800">
+        <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+          <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
+            <i class="text-gray-200 text-3xl p-3 fa fa-university" aria-hidden="true" style="padding-top: 10px;font-size: large;"></i>
+            <span class="ml-3 text-xl text-gray-200">SPARKS BANK</span>
+          </a>
+          <nav class="md:ml-auto flex flex-wrap items-center text-base justify-center">
+            <a class="mr-5 hover:text-gray-500 text-gray-200" style="cursor: pointer;" routerLink = "/">Home</a>
+            <a class="mr-5 hover:text-gray-500 text-gray-200" style="cursor: pointer;" routerLink = "/adduser">Add user</a>
+            <a class="mr-5 hover:text-gray-500 text-gray-200" style="cursor: pointer;" routerLink = "/allusers">Manage transactions</a>
+            <a class="mr-5 hover:text-gray-500 text-gray-200" style="cursor: pointer;" routerLink = "/history">View transactions</a>
+          </nav>
+        </div>
+    </header>
+    <router-outlet></router-outlet>
+    <!--footer-->
+    <footer class="text-gray-200 body-font bg-gray-800">
+        <div class="container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col">
+            <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
+                <i class="text-gray-200 text-3xl p-3 fa fa-university" aria-hidden="true" style="padding-top: 10px;"></i>
+                <span class="ml-3 text-xl text-gray-200">SPARKS BANK</span>
+            </a>
+            <p class="text-sm text-gray-200 sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-200 sm:py-2 sm:mt-0 mt-4">By - Mayank Chittora</p>
+            <span class="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">
+                <a class="ml-3 text-gray-200" href="https://github.com/Mayank18-dotcom/sparks-bank.git">
+                    <i class="fa fa-github w-5 h-5" style="font-size: large;cursor: pointer;" aria-hidden="true"> </i>
+                </a>
+                &nbsp;
+                <a class="ml-3 text-gray-200" href="https://www.linkedin.com/in/mayank-chittora-3920a319b/">
+                    <i class="fa fa-linkedin w-5 h-5" style="font-size: large;cursor: pointer;" aria-hidden="true"></i>
+                </a>
+            </span>
+        </div>
+      </footer>
+</body>
+</html>
