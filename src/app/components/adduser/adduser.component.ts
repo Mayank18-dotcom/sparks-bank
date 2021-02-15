@@ -26,7 +26,7 @@ export class AdduserComponent implements OnInit {
       alert("Please enter email");
     }
     else if(!this.newUser.balance){
-      alert("Please enter name");
+      alert("Please enter balance");
     }
     else{
       this.service.postuser(this.newUser).subscribe(data=>{
